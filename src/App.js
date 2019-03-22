@@ -1,26 +1,48 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import BaseLayout from './Components/BaseLayout';
+import Hero from './Components/Hero';
+import { ThemeProvider } from 'styled-components';
+import { theme } from './Theme/Main';
+import About from './Components/About';
+import Projects from './Components/Projects';
+
 
 class App extends Component {
+
+ state = theme
+
+ myCallback = (dataFromChild) => {
+   
+   if(dataFromChild){
+  this.setState({
+    ...theme,
+    main: dataFromChild,
+      }
+    )
+   }
+}
+ 
   render() {
+
+    this.hander = () => {
+      console.log("hit")
+      this.setState({
+        ...theme,
+        main: "#CE3817",
+      }
+    )
+    }
+    
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <ThemeProvider theme={this.state}>
+        <BaseLayout>
+          <Hero/>
+          <About callbackFromParent={this.myCallback}/>
+          <Projects/>
+        </BaseLayout>
+      </ThemeProvider>
     );
   }
 }
