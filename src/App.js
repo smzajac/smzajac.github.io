@@ -10,16 +10,51 @@ import Projects from './Components/Projects';
 
 class App extends Component {
 
- state = theme
+ state = {
+   ...theme,
+   error: false,
+}
+
+//takes two parameters the hex color and luminosity factor
+//  -0.1 is 10% darker, 0.2 is 20% lighter, etc. 
+ColorLuminance = (hex, lum) => {
+	// validate hex string
+	hex = String(hex).replace(/[^0-9a-f]/gi, '');
+	if (hex.length < 6) {
+		hex = hex[0]+hex[0]+hex[1]+hex[1]+hex[2]+hex[2];
+	}
+	lum = lum || 0;
+
+	// convert to decimal and change luminosity
+	var rgb = "#", c, i;
+	for (i = 0; i < 3; i++) {
+		c = parseInt(hex.substr(i*2,2), 16);
+		c = Math.round(Math.min(Math.max(0, c + (c * lum)), 255)).toString(16);
+		rgb += ("00"+c).substr(c.length);
+	}
+
+	return rgb;
+}
 
  myCallback = (dataFromChild) => {
-   
-   if(dataFromChild){
+  let ishex  = /^#[0-9A-F]{6}$/i.test(dataFromChild)
+
+   if(ishex){
+    let darker = this.ColorLuminance(dataFromChild, -0.2);
+    let lighter = this.ColorLuminance(dataFromChild, 0.2);
   this.setState({
     ...theme,
     main: dataFromChild,
+    dark: darker,
+    light: lighter,
+    error: false,
       }
     )
+   }else{
+     this.setState({
+       ...theme,
+       error: true,
+     })
    }
 }
  
@@ -39,7 +74,7 @@ class App extends Component {
       <ThemeProvider theme={this.state}>
         <BaseLayout>
           <Hero/>
-          <About callbackFromParent={this.myCallback}/>
+          <About callbackFromParent={this.myCallback} error={this.state.error}/>
           <Projects/>
         </BaseLayout>
       </ThemeProvider>

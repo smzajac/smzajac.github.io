@@ -108,7 +108,6 @@ class About extends React.Component{
         this.setState({
             value: e.target.value
         })
-        console.log(this.state)
     }
 
     render(){
@@ -125,7 +124,7 @@ class About extends React.Component{
                         I enjoy coming up with creative solutions to everyday problems and using technology as a medium.
                         <br/><br/>
                         I believe applications need to be built in a scalable way that can be easily updated.  To show this, enter a hex value in the
-                        space below to change the over-arching theme of my site!
+                        space below to change the over-arching color theme of my site!
                         <br/><br/>
                         Website made using React.
                         </p>
@@ -134,6 +133,10 @@ class About extends React.Component{
                         <Input placeholder="#000000" onChange={this.handleChange}></Input>
                         <ColorButton onClick={() => this.props.callbackFromParent(this.state.value)}>Change!</ColorButton>
                     </Center>
+                    {this.props.error ? <Center>
+                        <p style={{paddingTop: "10px", color: "red"}}>Enter a valid Hex Key</p>
+                    </Center> : ""
+                    }
                 <Holder/>
                 <Abilities>
                     <SkillsHeader>Skills</SkillsHeader>   
