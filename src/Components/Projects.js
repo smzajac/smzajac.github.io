@@ -20,10 +20,16 @@ const projects = [
     },
 ]
 
+const FadeInAnimation = keyframes`  
+from { opacity: 0; transform: translate3d(0,-10px,0); }
+to { opacity: 1; transform: translate3d(0,0,0);}
+`; 
+
 const Holder = styled.div`
     :hover{
-        div{
-            // display: block
+        .info{
+            display: block
+            animation-name: ${FadeInAnimation};
         }
     }
     width: 70%;
@@ -36,27 +42,43 @@ const Holder = styled.div`
         width: 100%;
     }
 
-    .info{ 
-        // display: none;
-        position: absolute;
-        background-color: ${props => props.theme.dark};
-        width: 100%;
-        color: white;
-        margin: auto;
-
-        .aboutTech{
-            display: flex;
-            // grid-template-columns: auto auto;
-            // padding: 5px 5px;
-            justify-content: space-around;
-
-            .gridItem{
-                width: 50%;
-            }
-
-        }
-    }
 `;
+
+const Info = styled.div`
+    display: none;
+    position: absolute;
+    background-color: ${props => props.theme.dark};
+    width: 100%;
+    color: white;
+    margin: auto;
+
+    .aboutTech{
+        display: flex;
+        justify-content: space-around;
+
+        .gridItem{
+            width: 100%;
+        
+             p{
+                 width: 80%;
+                 margin: auto;
+                 padding: 5%;
+                 font-size: 14px;
+             }
+
+             ul{
+                padding: 0px;   
+             }
+             li{
+                 overflow: hidden;
+                 font-size: 14px;
+             }
+        }
+
+    }
+
+
+`
 
 const Template = styled.div`
     display: flex;
@@ -76,12 +98,6 @@ const SkillsHeader = styled.h3`
     color: ${props => props.theme.dark}
 `
 
-
-const FadeInAnimation = keyframes`  
-from { opacity: 0; transform: translate3d(0,-10px,0); }
-to { opacity: 1; transform: translate3d(0,0,0);}
-`; 
-
 const FadeIn = styled(BaseAnimation)`
 animation-name: ${FadeInAnimation};
 `;
@@ -98,31 +114,25 @@ class Projects extends React.Component{
                     return(
                         <Holder>
                             <a href={item.link} target="_blank">
-                            <FadeIn duration="0.8s">
-                                <div className="info">
+                            <FadeIn>
+                                <Info className="info">
                                    <h3>{item.info}</h3>
                                    <div className="aboutTech">
-                                       {/* <div style={{flexDirection: "column", alignItems:"center", width: "50%"}}> */}
                                        <div className="gridItem">
                                           <div style={{fontWeight:"bold"}}>About</div>
+                                           <p>hello this is content for the item I am going to type a lot to see how this reacts to its space given</p>
                                           </div>
-                                            {/* <div style={{width: "50%"}}>hello more random item
-                                                this is some really cool 
-                                                stuff ya dig?
-                                            </div> */}
-                                       {/* </div> */}
+
                                        <div className="gridItem">
-                                       {/* <div style={{flexDirection: "column", alignItems:"center", paddingRight:"40px"}}> */}
                                           <div style={{fontWeight:"bold"}}>Technologies</div>
-                                                {/* <ul>
-                                                    <li>React</li>
-                                                    <li>Redux</li>
-                                                    <li>Node.js</li>
-                                                </ul> */}
-                                          {/* </div> */}
+                                          <ul>
+                                              <li>React</li>
+                                              <li>Redux</li>
+                                              <li>Node.js</li>
+                                          </ul>
                                        </div>
                                     </div>
-                                </div>
+                                </Info>
                             </FadeIn>
                                 <img width="70%" height="auto" src={`${item.item}`}/>
                             </a>
