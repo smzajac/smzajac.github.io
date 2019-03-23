@@ -8,15 +8,21 @@ import BaseAnimation from '../Assets/Animations/BaseAnimation'
 const projects = [
     {item: Kenzie,
      link: "https://online.kenzie.academy/",
-     info: "Kenzie Online"
+     name: "Kenzie Online",
+     tech: ["React", "Redux", "Redux Saga", "Node.js"],
+     about: "Member of team working on Learning Management System for Kenzie Academy. Assisted in development of frontend and the deployment of the platform."
     },
     {item: Offerings,
      link: "https://offerings-staging.kenzie.studio/",
-     info: "Offerings"
+     name: "Offerings",
+     tech: ["React", "Redux", "Redux Thunk", "Node.js"],
+     about: "Small passion project giving people the ability to offer their spare food to their local community."
     },
     {item: Wooble,
      link: "https://play.google.com/store/apps/details?id=com.novacovellc.wooblewobble&hl=en",
-     info: "Wooble Wobble"
+     name: "Wooble Wobble",
+     tech: ["Unity", "C#", "Maya"],
+     about: "Game made for the Merge VR cube which was sold in stores around the US."
     },
 ]
 
@@ -27,9 +33,8 @@ to { opacity: 1; transform: translate3d(0,0,0);}
 
 const Holder = styled.div`
     :hover{
-        .info{
+        div{
             display: block
-            animation-name: ${FadeInAnimation};
         }
     }
     width: 70%;
@@ -42,43 +47,43 @@ const Holder = styled.div`
         width: 100%;
     }
 
+    div{ 
+        display: none;
+        position: absolute;
+        background-color: ${props => props.theme.dark};
+        width: 100%;
+        color: white;
+        margin: auto;
+
+        .aboutTech{
+            display: flex;
+            justify-content: space-around;
+
+            .gridItem{
+                width: 100%;
+                margin-top: 0px;
+                
+                 p{
+                     width: 80%;
+                     margin: auto;
+                     padding: 2%;
+                     font-size: 14px;
+                 }
+
+                 ul{
+                    padding: 0px; 
+                    margin: 0px;  
+                 }
+                 li{
+                     overflow: hidden;
+                     font-size: 14px;
+                 }
+            }
+
+        }
+    }
 `;
 
-const Info = styled.div`
-    display: none;
-    position: absolute;
-    background-color: ${props => props.theme.dark};
-    width: 100%;
-    color: white;
-    margin: auto;
-
-    .aboutTech{
-        display: flex;
-        justify-content: space-around;
-
-        .gridItem{
-            width: 100%;
-        
-             p{
-                 width: 80%;
-                 margin: auto;
-                 padding: 5%;
-                 font-size: 14px;
-             }
-
-             ul{
-                padding: 0px;   
-             }
-             li{
-                 overflow: hidden;
-                 font-size: 14px;
-             }
-        }
-
-    }
-
-
-`
 
 const Template = styled.div`
     display: flex;
@@ -115,24 +120,28 @@ class Projects extends React.Component{
                         <Holder>
                             <a href={item.link} target="_blank">
                             <FadeIn>
-                                <Info className="info">
-                                   <h3>{item.info}</h3>
+                                <div>
+                                <div className="info">
+                                   <p>{item.name}</p>
                                    <div className="aboutTech">
-                                       <div className="gridItem">
-                                          <div style={{fontWeight:"bold"}}>About</div>
-                                           <p>hello this is content for the item I am going to type a lot to see how this reacts to its space given</p>
-                                          </div>
+                                       <p className="gridItem">
+                                          <p style={{fontWeight:"bold"}}>About</p>
+                                           <p>{item.about}</p>
+                                          </p>
 
-                                       <div className="gridItem">
-                                          <div style={{fontWeight:"bold"}}>Technologies</div>
+                                       <p className="gridItem">
+                                          <p style={{fontWeight:"bold"}}>Technologies</p>
                                           <ul>
-                                              <li>React</li>
-                                              <li>Redux</li>
-                                              <li>Node.js</li>
+                                              {item.tech.map(tech => {
+                                                  return(
+                                                      <li>{tech}</li>
+                                                  )
+                                              })}
                                           </ul>
-                                       </div>
+                                       </p>
                                     </div>
-                                </Info>
+                                </div>
+                                </div>
                             </FadeIn>
                                 <img width="70%" height="auto" src={`${item.item}`}/>
                             </a>
