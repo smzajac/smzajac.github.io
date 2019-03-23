@@ -6,6 +6,7 @@ import { ThemeProvider } from 'styled-components';
 import { theme } from './Theme/Main';
 import About from './Components/About';
 import Projects from './Components/Projects';
+import Skills from './Components/Skills';
 
 
 class App extends Component {
@@ -37,6 +38,14 @@ ColorLuminance = (hex, lum) => {
 }
 
  myCallback = (dataFromChild) => {
+   
+  if(dataFromChild === undefined){
+    this.setState({
+      ...theme,
+      error: true,
+    })
+    return
+  }
 
   if(dataFromChild[0] !== '#'){
     dataFromChild = `#${dataFromChild}`
@@ -80,6 +89,7 @@ ColorLuminance = (hex, lum) => {
         <BaseLayout>
           <Hero/>
           <About callbackFromParent={this.myCallback} error={this.state.error}/>
+          {/* <Skills/> */}
           <Projects/>
         </BaseLayout>
       </ThemeProvider>

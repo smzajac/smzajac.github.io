@@ -13,19 +13,48 @@ class Hero extends React.Component{
         const HeroImg = styled.div`
             background-image: url(${Landscape});
             // background-size: 100%;
-            padding: 150px 50px;
-            height: 500px;
+            padding: 9% 5%;
+
+            @media only screen and (max-width: ${props => props.theme.breakpoints.sm}px) {
+                height: 400px; 
+            }
 
         `;
         const HeroText = styled.h1`
-            font-size 90px;
             color: white;
+
+            @media only screen and (max-width: ${props => props.theme.breakpoints.sm}px) {
+                  font-size: 50px;
+                  padding-top: 15%;
+              }
+
+            @media only screen and (min-width: ${props => props.theme.breakpoints.sm}px) {
+                font-size: 70px;
+              }
+
+            @media only screen and (min-width: ${props => props.theme.breakpoints.md}px) {
+                  font-size: 90px; 
+              }
         `;
 
         const HeroSubText = styled.h2`
-            font-size 80px;
             color: white;
-            width: 70%;
+           
+
+            @media only screen and (max-width: ${props => props.theme.breakpoints.sm}px) {
+                font-size: 45px;
+                }
+
+            @media only screen and (min-width: ${props => props.theme.breakpoints.sm}px) {
+                font-size: 65px;
+                width: 90%
+              }
+
+
+          @media only screen and (min-width: ${props => props.theme.breakpoints.md}px) {
+                font-size: 80px; 
+                width: 80%
+            }
         `;
 
         const FadeInAnimation = keyframes`  
