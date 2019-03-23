@@ -1,6 +1,10 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import BaseAnimation from '../Assets/Animations/BaseAnimation'
+import Deviant from '../Assets/Icons/Deviantart.svg'
+import Linkedin from '../Assets/Icons/LinkedIn.svg'
+import GitHub from '../Assets/Icons/GitHub.svg'
+import Twitter from '../Assets/Icons/Twitter.svg'
 
 //https://www.pexels.com/photo/adventure-calm-clouds-dawn-414171/
 import Landscape from '../Assets/Images/landscape.jpeg';
@@ -66,6 +70,33 @@ class Hero extends React.Component{
             animation-name: ${FadeInAnimation};
         `;
 
+        const IconHolder = styled.div`
+        @media only screen and (min-width: ${props => props.theme.breakpoints.sm}px) {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin-bottom: -150px;
+            position: relative;
+            bottom: 100px;
+            left: 30px;
+          }
+
+          @media only screen and (max-width: ${props => props.theme.breakpoints.sm}px) {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            top: 30px;
+            }
+        `
+
+        const Icons = styled.img`
+        padding: 0px 5px;
+        :hover {
+            transform: scale(1.15);
+            transition: transform .20s ease-out;
+    }
+    `;
+
         return(
             <div>
                 <HeroImg>
@@ -79,6 +110,12 @@ class Hero extends React.Component{
                             I'm a Developer and Designer.
                         </HeroSubText>
                     </FadeIn>
+                    <IconHolder>     
+                    <a href="https://www.linkedin.com/in/zajacsarah/" target="_blank"><Icons src={Linkedin}/></a>
+                    <a href="https://github.com/smzajac" target="_blank"><Icons src={GitHub}/></a>
+                    <a href="https://twitter.com/ZeyHeySar" target="_blank"><Icons src={Twitter}/></a>
+                    <a href="https://www.deviantart.com/sarahzajac" target="_blank"><Icons src={Deviant}/></a> 
+                    </IconHolder>          
                 </HeroImg>
             </div>
         )

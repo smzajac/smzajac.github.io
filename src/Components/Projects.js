@@ -112,7 +112,7 @@ class Projects extends React.Component{
     
     render(){
         return(
-            <Background>
+            <Background id="projects">
                 <SkillsHeader>Projects</SkillsHeader>
                 <Template>
                 {projects.map(item => {

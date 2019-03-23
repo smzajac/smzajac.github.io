@@ -16,7 +16,7 @@ export default class BaseLayout extends React.Component{
     padding: 15px;
     color: white;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     `;
 
@@ -65,16 +65,16 @@ export default class BaseLayout extends React.Component{
             <div>
                 <Header>
                     <div>
-                        <NavButton>About</NavButton>
-                        <NavButton>Portfolio</NavButton>
-                        <NavButton>Contact</NavButton>
+                        <a href="#about"><NavButton>About</NavButton></a>
+                        <a href="#projects"><NavButton>Portfolio</NavButton></a>
+                        <a href="mailto:sarahmzajac@gmail.com"><NavButton>Contact</NavButton></a>
                     </div>
-                    <div>     
+                    {/* <div>     
                     <a href="https://www.linkedin.com/in/zajacsarah/" target="_blank"><Icons src={Linkedin}/></a>
                     <a href="https://github.com/smzajac" target="_blank"><Icons src={GitHub}/></a>
                     <a href="https://twitter.com/ZeyHeySar" target="_blank"><Icons src={Twitter}/></a>
                     <a href="https://www.deviantart.com/sarahzajac" target="_blank"><Icons src={Deviant}/></a> 
-                    </div>          
+                    </div>           */}
                 </Header>
                     {this.props.children}  
                 <Footer>

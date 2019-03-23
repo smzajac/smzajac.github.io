@@ -105,7 +105,7 @@ class About extends React.Component{
                 <Holder/>
                     <Bio> 
                         <React.Fragment>
-                        <div>
+                        <div id="about">
                         <img style={{borderRadius: "50%", padding: "15px", marginRight: "20px"}} width="250px" height="250px" src={Me}/>
                         </div>
                         <p>
