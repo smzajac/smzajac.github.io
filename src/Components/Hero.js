@@ -42,7 +42,7 @@ class Hero extends React.Component{
                 <HeroImg>
                     <FadeIn duration="1s">
                     <HeroText>
-                        Hi, Im Sarah.
+                        Hi, I'm Sarah.
                     </HeroText>
                     </FadeIn>
                     <FadeIn delay="1.2s">

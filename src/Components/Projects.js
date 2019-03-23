@@ -41,7 +41,7 @@ class Projects extends React.Component{
                 {projects.map(item => {
                     return(
                         <Holder> 
-                            <img src={`${item.item}`}/>
+                            <img width="250px" src={`${item.item}`}/>
                         </Holder>
                     )
                 })}

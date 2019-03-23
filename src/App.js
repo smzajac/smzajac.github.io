@@ -37,6 +37,11 @@ ColorLuminance = (hex, lum) => {
 }
 
  myCallback = (dataFromChild) => {
+
+  if(dataFromChild[0] !== '#'){
+    dataFromChild = `#${dataFromChild}`
+  }
+
   let ishex  = /^#[0-9A-F]{6}$/i.test(dataFromChild)
 
    if(ishex){

@@ -110,6 +110,12 @@ class About extends React.Component{
         })
     }
 
+    handleKeyPress = (e) => {
+        if(e.charCode === 13){
+            this.props.callbackFromParent(this.state.value)
+        }
+    }
+
     render(){
         return(
             <div>
@@ -130,7 +136,7 @@ class About extends React.Component{
                         </p>
                     </Center>
                     <Center>
-                        <Input placeholder="#000000" onChange={this.handleChange}></Input>
+                        <Input placeholder="#000000" onChange={this.handleChange} onKeyPress={this.handleKeyPress}></Input>
                         <ColorButton onClick={() => this.props.callbackFromParent(this.state.value)}>Change!</ColorButton>
                     </Center>
                     {this.props.error ? <Center>
