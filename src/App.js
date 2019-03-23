@@ -89,7 +89,7 @@ ColorLuminance = (hex, lum) => {
         <BaseLayout>
           <Hero/>
           <About callbackFromParent={this.myCallback} error={this.state.error}/>
-          {/* <Skills/> */}
+          <Skills/>
           <Projects/>
         </BaseLayout>
       </ThemeProvider>

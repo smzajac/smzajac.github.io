@@ -121,7 +121,7 @@ class Projects extends React.Component{
                             <a href={item.link} target="_blank">
                             <FadeIn>
                                 <div>
-                                <div className="info">
+                                <div className="info" style={{fontSize: "25px"}}>
                                    <p>{item.name}</p>
                                    <div className="aboutTech">
                                        <p className="gridItem">
