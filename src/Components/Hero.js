@@ -76,7 +76,7 @@ class Hero extends React.Component{
                     </FadeIn>
                     <FadeIn delay="1.2s">
                         <HeroSubText>
-                            I'm a Designer and Developer.
+                            I'm a Developer and Designer.
                         </HeroSubText>
                     </FadeIn>
                 </HeroImg>
