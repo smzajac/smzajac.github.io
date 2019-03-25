@@ -56,7 +56,7 @@ self.__precacheManifest = [
     "url": "/static/media/WoobleWobble.219a6b3c.png"
   },
   {
-    "revision": "bd34a69c122e21338b80e601352b27fb",
+    "revision": "6ae9d90695df3d87297a885928772f86",
     "url": "/index.html"
   }
 ];
