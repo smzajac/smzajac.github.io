@@ -114,7 +114,7 @@ class Hero extends React.Component{
                     <a href="https://www.linkedin.com/in/zajacsarah/" target="_blank"><Icons src={Linkedin}/></a>
                     <a href="https://github.com/smzajac" target="_blank"><Icons src={GitHub}/></a>
                     <a href="https://twitter.com/ZeyHeySar" target="_blank"><Icons src={Twitter}/></a>
-                    <a href="https://www.deviantart.com/sarahzajac" target="_blank"><Icons src={Deviant}/></a> 
+                    {/* <a href="https://www.deviantart.com/sarahzajac" target="_blank"><Icons src={Deviant}/></a>  */}
                     </IconHolder>          
                 </HeroImg>
             </div>
