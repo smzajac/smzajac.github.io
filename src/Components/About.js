@@ -2,14 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import Me from '../Assets/Images/me.jpg';
 
-const Divider = styled.hr`
-    height: 3px;
-    width: 90%;
-    background-color: ${props => props.theme.main};
-    border: none;
-    margin-top: 30px;
-    margin-bottom: 30px;
-`;
+// const Divider = styled.hr`
+//     height: 3px;
+//     width: 90%;
+//     background-color: ${props => props.theme.main};
+//     border: none;
+//     margin-top: 30px;
+//     margin-bottom: 30px;
+// `;
 
 
 const Holder = styled.div`
@@ -106,7 +106,7 @@ class About extends React.Component{
                     <Bio> 
                         <React.Fragment>
                         <div id="about">
-                        <img style={{borderRadius: "50%", padding: "15px", marginRight: "20px"}} width="250px" height="250px" src={Me}/>
+                        <img alt="me" style={{borderRadius: "50%", padding: "15px", marginRight: "20px"}} width="250px" height="250px" src={Me}/>
                         </div>
                         <p>
                         I am an Indianapolis local with a mixed bag of
@@ -129,7 +129,7 @@ class About extends React.Component{
                     </Center>
                     {this.props.error ? <Center>
                         <p style={{paddingTop: "10px", color: "red"}}>Enter a valid Hex Key, try: 4EA6BB 
-                        or click <a href="https://htmlcolorcodes.com/" target="_blank">here</a> to make your own!
+                        or click <a href="https://htmlcolorcodes.com/" rel="noopener noreferrer" target="_blank">here</a> to make your own!
                          </p>
                     </Center> : ""
                     }

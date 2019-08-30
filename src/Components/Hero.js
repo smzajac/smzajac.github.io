@@ -1,10 +1,9 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import BaseAnimation from '../Assets/Animations/BaseAnimation'
-import Deviant from '../Assets/Icons/Deviantart.svg'
 import Linkedin from '../Assets/Icons/LinkedIn.svg'
 import GitHub from '../Assets/Icons/GitHub.svg'
-import Twitter from '../Assets/Icons/Twitter.svg'
+import GitLab from '../Assets/Icons/GitLab.svg'
 
 //https://www.pexels.com/photo/adventure-calm-clouds-dawn-414171/
 import Landscape from '../Assets/Images/landscape.jpeg';
@@ -111,10 +110,9 @@ class Hero extends React.Component{
                         </HeroSubText>
                     </FadeIn>
                     <IconHolder>     
-                    <a href="https://www.linkedin.com/in/zajacsarah/" target="_blank"><Icons src={Linkedin}/></a>
-                    <a href="https://github.com/smzajac" target="_blank"><Icons src={GitHub}/></a>
-                    <a href="https://twitter.com/ZeyHeySar" target="_blank"><Icons src={Twitter}/></a>
-                    {/* <a href="https://www.deviantart.com/sarahzajac" target="_blank"><Icons src={Deviant}/></a>  */}
+                    <a href="https://www.linkedin.com/in/zajacsarah/" rel="noopener noreferrer" target="_blank"><Icons src={Linkedin}/></a>
+                    <a href="https://github.com/smzajac" rel="noopener noreferrer" target="_blank"><Icons src={GitHub}/></a>
+                    <a href="https://gitlab.com/smzajac" rel="noopener noreferrer" target="_blank"><Icons src={GitLab}/></a>
                     </IconHolder>          
                 </HeroImg>
             </div>

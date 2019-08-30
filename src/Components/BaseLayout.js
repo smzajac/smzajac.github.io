@@ -3,10 +3,6 @@ import styled from 'styled-components'
 
 // icons from https://codepen.io/ruandre/pen/howFi?editors=1100
 import Email from '../Assets/Icons/Email.svg'
-import Deviant from '../Assets/Icons/Deviantart.svg'
-import Linkedin from '../Assets/Icons/LinkedIn.svg'
-import GitHub from '../Assets/Icons/GitHub.svg'
-import Twitter from '../Assets/Icons/Twitter.svg'
 
 export default class BaseLayout extends React.Component{
     render(){
@@ -69,12 +65,6 @@ export default class BaseLayout extends React.Component{
                         <a href="#projects"><NavButton>Portfolio</NavButton></a>
                         <a href="mailto:sarahmzajac@gmail.com"><NavButton>Contact</NavButton></a>
                     </div>
-                    {/* <div>     
-                    <a href="https://www.linkedin.com/in/zajacsarah/" target="_blank"><Icons src={Linkedin}/></a>
-                    <a href="https://github.com/smzajac" target="_blank"><Icons src={GitHub}/></a>
-                    <a href="https://twitter.com/ZeyHeySar" target="_blank"><Icons src={Twitter}/></a>
-                    <a href="https://www.deviantart.com/sarahzajac" target="_blank"><Icons src={Deviant}/></a> 
-                    </div>           */}
                 </Header>
                     {this.props.children}  
                 <Footer>

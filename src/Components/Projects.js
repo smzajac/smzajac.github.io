@@ -118,7 +118,7 @@ class Projects extends React.Component{
                 {projects.map(item => {
                     return(
                         <Holder>
-                            <a href={item.link} target="_blank">
+                            <a href={item.link} rel="noopener noreferrer" target="_blank">
                             <FadeIn>
                                 <div>
                                 <div className="info" style={{fontSize: "25px"}}>
@@ -143,7 +143,7 @@ class Projects extends React.Component{
                                 </div>
                                 </div>
                             </FadeIn>
-                                <img width="70%" height="auto" src={`${item.item}`}/>
+                                <img alt="project" width="70%" height="auto" src={`${item.item}`}/>
                             </a>
                         </Holder>
                     )
