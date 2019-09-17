@@ -75,7 +75,6 @@ ColorLuminance = (hex, lum) => {
   render() {
 
     this.hander = () => {
-      console.log("hit")
       this.setState({
         ...theme,
         main: "#CE3817",
