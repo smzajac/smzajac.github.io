@@ -3,6 +3,7 @@ import styled, { keyframes } from 'styled-components';
 import Kenzie from '../Assets/Images/KenzieOnline.png'
 import Offerings from '../Assets/Images/Offerings.png'
 import Wooble from '../Assets/Images/WoobleWobble.png'
+import Profiles from '../Assets/Images/KenzieProfiles.png'
 import BaseAnimation from '../Assets/Animations/BaseAnimation'
 
 const projects = [
@@ -12,14 +13,20 @@ const projects = [
      tech: ["React", "Redux", "Redux Saga", "Node.js"],
      about: "Member of team working on Learning Management System for Kenzie Academy. Assisted in development of frontend and the deployment of the platform."
     },
+    {item: Profiles,
+     link: 'https://profiles.kenzie.academy/',
+     name: "Kenzie Profiles",
+     tech: ["React", "Redux", "Node.js", "Material UI"],
+     about: "Tool used by Kenzie Academy's Placement team to curate an exclusive student recruitment experience to our partners"
+    },
     {item: Offerings,
-     link: "https://offerings-staging.kenzie.studio/",
+    //  link: "https://offerings-staging.kenzie.studio/",
      name: "Offerings",
      tech: ["React", "Redux", "Redux Thunk", "Node.js"],
      about: "Small passion project giving people the ability to offer their spare food to their local community."
     },
     {item: Wooble,
-     link: "https://play.google.com/store/apps/details?id=com.novacovellc.wooblewobble&hl=en",
+    //  link: "https://play.google.com/store/apps/details?id=com.novacovellc.wooblewobble&hl=en",
      name: "Wooble Wobble",
      tech: ["Unity", "C#", "Maya"],
      about: "Game made for the Merge VR cube which was sold in stores around the US."
