@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "0ca7641692c7493dc8b361b8c8b0937d",
-    "url": "/static/media/GitLab.0ca76416.svg"
+    "revision": "4916a76f5c8c55ed463f",
+    "url": "/static/css/main.f883c134.chunk.css"
   },
   {
-    "revision": "3b31343c1eddffdf3ae2",
-    "url": "/static/css/main.169ed574.chunk.css"
+    "revision": "4916a76f5c8c55ed463f",
+    "url": "/static/js/main.032ce91a.chunk.js"
   },
   {
-    "revision": "42ac5946195a7306e2a5",
-    "url": "/static/js/runtime~main.a8a9905a.js"
+    "revision": "fdfcfda2d9b1bf31db52",
+    "url": "/static/js/runtime~main.c5541365.js"
   },
   {
-    "revision": "f6c0bd7ebda42ff95b13",
-    "url": "/static/js/2.b1442ef5.chunk.js"
+    "revision": "7807f98f571811aa8282",
+    "url": "/static/js/2.009acf87.chunk.js"
   },
   {
     "revision": "2b8a21aaf47d4a7a5a7bae98e5224584",
@@ -28,8 +28,8 @@ self.__precacheManifest = [
     "url": "/static/media/GitHub.838cc91b.svg"
   },
   {
-    "revision": "3b31343c1eddffdf3ae2",
-    "url": "/static/js/main.fd066c0b.chunk.js"
+    "revision": "0ca7641692c7493dc8b361b8c8b0937d",
+    "url": "/static/media/GitLab.0ca76416.svg"
   },
   {
     "revision": "9dd708b07a2a0687741b67271014b0e0",
@@ -52,7 +52,11 @@ self.__precacheManifest = [
     "url": "/static/media/WoobleWobble.219a6b3c.png"
   },
   {
-    "revision": "d6add99e44a29d26ed40160be8862710",
+    "revision": "3ab6fa1d60c23383899589a9ed47cf36",
+    "url": "/static/media/KenzieProfiles.3ab6fa1d.png"
+  },
+  {
+    "revision": "2b234bd9d35bae5bb781314066a411fa",
     "url": "/index.html"
   }
 ];
