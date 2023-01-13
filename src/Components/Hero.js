@@ -80,7 +80,11 @@ const FadeInAnimation = keyframes`
 `;
 
 const FadeIn = styled(BaseAnimation)`
+    -moz-animation: ${FadeInAnimation};
+    -ms-animation: ${FadeInAnimation};
+    -o-animation: ${FadeInAnimation};
     animation-name: ${FadeInAnimation};
+    
 `;
 
 const IconHolder = styled.div`
@@ -116,10 +120,11 @@ const ArrowIcon = styled.img`
 const MeImg = styled.div`
     margin-left: 15%;
     border-radius: 50%;
-    outline: 4px solid #ad1d44;
-    outline-offset: 10px;
+    border: 5px solid #ad1d44;
+    background-color: #ad1d44;
     img{
         border-radius: 50%;
+        aspect-ratio: 1 / 1;
     }
 
     @media only screen and (max-width: ${props => props.theme.breakpoints.sm}px) {
