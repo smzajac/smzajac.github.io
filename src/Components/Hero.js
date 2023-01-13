@@ -79,13 +79,6 @@ const FadeInAnimation = keyframes`
     to { opacity: 1; transform: translate3d(0,0,0);}
 `;
 
-const RotatingAnimation = keyframes`
-    spin {
-        from {transform: translate(-50%, -50%) rotate(0);}
-        to   {transform: translate(-50%, -50%) rotate(360deg);}
-    }
-`;
-
 const FadeIn = styled(BaseAnimation)`
     animation-name: ${FadeInAnimation};
 `;
@@ -189,7 +182,7 @@ function Hero() {
                         </FadeIn>
                     </HeroBio>
                     <MeImg>
-                        <img src={Me} />
+                        <img alt="Sarah smiling at camera with cat on her shoulder" src={Me} />
                     </MeImg>
                     <IconHolder>     
                     {/* <a href="https://www.linkedin.com/in/zajacsarah/" rel="noopener noreferrer" target="_blank"><Icons src={Linkedin}/></a>

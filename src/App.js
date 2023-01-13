@@ -5,8 +5,7 @@ import Hero from './Components/Hero';
 import { ThemeProvider } from 'styled-components';
 import { theme } from './Theme/Main';
 import About from './Components/AboutNew';
-import Projects from './Components/Projects';
-import Skills from './Components/Skills';
+import Projects from './Components/ProjectsNew';
 
 
 class App extends Component {
@@ -87,9 +86,7 @@ ColorLuminance = (hex, lum) => {
       <ThemeProvider theme={this.state}>
         <BaseLayout>
             <Hero/>
-            {/* <About callbackFromParent={this.myCallback} error={this.state.error}/> */}
             <About/>
-            <Skills/>
             <Projects/>
         </BaseLayout>
       </ThemeProvider>
