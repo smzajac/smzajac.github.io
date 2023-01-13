@@ -4,28 +4,35 @@ import Kenzie from '../Assets/Images/KenzieOnline.png'
 import Offerings from '../Assets/Images/Offerings.png'
 import Wooble from '../Assets/Images/WoobleWobble.png'
 import Profiles from '../Assets/Images/KenzieProfiles.png'
+import LineupLens from '../Assets/Images/LineupLens.png'
 import BaseAnimation from '../Assets/Animations/BaseAnimation'
 
 const projects = [
-    {item: Kenzie,
+    {image: LineupLens,
+     link: "https://lineuplens.com",
+     name: "Lineup Lens",
+     tech: ["React", "GoogleSheets API", "Spotify"," Node.js", "Material UI"],
+     about: "Passion project to compare Spotify listen history with upcoming Music Festival Lineups"
+    },
+    {image: Kenzie,
      link: "https://online.kenzie.academy/",
      name: "Kenzie Online",
      tech: ["React", "Redux", "Redux Saga", "Node.js"],
      about: "Member of team working on Learning Management System for Kenzie Academy. Assisted in development of frontend and the deployment of the platform."
     },
-    {item: Profiles,
+    {image: Profiles,
      link: 'https://profiles.kenzie.academy/',
      name: "Kenzie Profiles",
      tech: ["React", "Redux", "Node.js", "Material UI"],
      about: "Tool used by Kenzie Academy's Placement team to curate an exclusive student recruitment experience to our partners"
     },
-    {item: Offerings,
+    {image: Offerings,
     //  link: "https://offerings-staging.kenzie.studio/",
      name: "Offerings",
      tech: ["React", "Redux", "Redux Thunk", "Node.js"],
      about: "Small passion project giving people the ability to offer their spare food to their local community."
     },
-    {item: Wooble,
+    {image: Wooble,
     //  link: "https://play.google.com/store/apps/details?id=com.novacovellc.wooblewobble&hl=en",
      name: "Wooble Wobble",
      tech: ["Unity", "C#", "Maya"],
@@ -150,7 +157,7 @@ class Projects extends React.Component{
                                 </div>
                                 </div>
                             </FadeIn>
-                                <img alt="project" width="70%" height="auto" src={`${item.item}`}/>
+                                <img alt="project" width="70%" height="auto" src={`${item.image}`}/>
                             </a>
                         </Holder>
                     )

@@ -4,7 +4,7 @@ import BaseLayout from './Components/BaseLayout';
 import Hero from './Components/Hero';
 import { ThemeProvider } from 'styled-components';
 import { theme } from './Theme/Main';
-import About from './Components/About';
+import About from './Components/AboutNew';
 import Projects from './Components/Projects';
 import Skills from './Components/Skills';
 
@@ -74,22 +74,23 @@ ColorLuminance = (hex, lum) => {
  
   render() {
 
-    this.hander = () => {
-      this.setState({
-        ...theme,
-        main: "#CE3817",
-      }
-    )
-    }
+    // this.hander = () => {
+    //   this.setState({
+    //     ...theme,
+    //     // main: "#CE3817",
+    //   }
+    // )
+    // }
     
 
     return (
       <ThemeProvider theme={this.state}>
         <BaseLayout>
-          <Hero/>
-          <About callbackFromParent={this.myCallback} error={this.state.error}/>
-          <Skills/>
-          <Projects/>
+            <Hero/>
+            {/* <About callbackFromParent={this.myCallback} error={this.state.error}/> */}
+            <About/>
+            <Skills/>
+            <Projects/>
         </BaseLayout>
       </ThemeProvider>
     );

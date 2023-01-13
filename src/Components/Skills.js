@@ -35,43 +35,43 @@ const Mobile = styled.div`
 }
 `
 
-export default class Skills extends React.Component{
-    render(){
-        return(
-            <div>       
+export default class Skills extends React.Component {
+    render() {
+        return (
+            <div>
                 <Abilities>
-                       <SkillsHeader>Skills</SkillsHeader>
-                       <Mobile>  
-                           <Skill>
-                               <SkillsHolder>
-                                   <h2>Programming</h2>
-                                   <ul>
-                                  <li>HTML</li>
-                                  <li>CSS</li>
-                                  <li>Javascript</li>
-                                  <li>React</li>
-                                  <li>Node.js</li>
-                                   </ul>
-                               </SkillsHolder>
-                               <SkillsHolder>
-                                   <h2>Deployment</h2>
-                                   <ul>
-                                  <li>Amazon Web Services</li>
-                                  <li>Docker</li>
-                                   </ul>
-                               </SkillsHolder>
-                               <SkillsHolder>
-                                   <h2>Game Development</h2>
-                                   <ul>
-                                  <li>Unity</li>
-                                  <li>C#</li>
-                                  <li>3D Modeling</li>
-                                  <li>Design Theory</li>
-                                   </ul>
-                               </SkillsHolder>
-                           </Skill>
-                           </Mobile> 
-                   </Abilities>
+                    <SkillsHeader>Skills</SkillsHeader>
+                    <Mobile>
+                        <Skill>
+                            <SkillsHolder>
+                                <h2>Programming</h2>
+                                <ul>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>Javascript</li>
+                                    <li>React</li>
+                                    <li>Node.js</li>
+                                </ul>
+                            </SkillsHolder>
+                            <SkillsHolder>
+                                <h2>Deployment</h2>
+                                <ul>
+                                    <li>Amazon Web Services</li>
+                                    <li>Docker</li>
+                                </ul>
+                            </SkillsHolder>
+                            <SkillsHolder>
+                                <h2>Game Development</h2>
+                                <ul>
+                                    <li>Unity</li>
+                                    <li>C#</li>
+                                    <li>3D Modeling</li>
+                                    <li>Design Theory</li>
+                                </ul>
+                            </SkillsHolder>
+                        </Skill>
+                    </Mobile>
+                </Abilities>
             </div>
         )
     }
