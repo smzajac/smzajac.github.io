@@ -124,7 +124,6 @@ const MeImg = styled.div`
     background-color: #ad1d44;
     img{
         border-radius: 50%;
-        aspect-ratio: 1 / 1;
     }
 
     @media only screen and (max-width: ${props => props.theme.breakpoints.sm}px) {
