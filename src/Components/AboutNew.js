@@ -149,9 +149,9 @@ export default function AboutNew(){
                         I started off my programming jouney learning Visual Basic back in highschool!
                         <br/> <br/>
                         Today, I have had the opportunity of working in both Ed-Tech and E-Commerce spaces, coming up with creative solutions to everyday problems and using technology as a medium.  I have been a member
-                            of dynamic teams who stick with a product through the entire lifecycle process.  My work has weighed heavility in Front-End tools such as React and Node.js along with creating micro-services running on serverless AWS solutions.
+                            of dynamic teams who stick with a product through the entire lifecycle process.  My work has weighed heavily in Front-End tools such as React and Node.js along with creating micro-services running on serverless AWS solutions.
                         <br/> <br/>
-                        In my spare time, I enjoy 3D printing (and constantly debugging the printers) . To stay active I practice Brazilian Jiu Jitsu!
+                        In my spare time, I enjoy 3D printing (and constantly debugging them). To stay active I practice Brazilian Jiu Jitsu!
                     </div>
                     <Chiclets>
                         <div>Here are a few of my favorite technologies:</div>
